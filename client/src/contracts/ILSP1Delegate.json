@@ -1,0 +1,436 @@
+{
+  "contractName": "ILSP1Delegate",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "typeId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "universalReceiverDelegate",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"typeId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"universalReceiverDelegate\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Contract module that allows for an external universal receiver smart contract,       that is the delegate of the initial universal receiver ERC 165 interface id: 0xc2d7bcc1\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ILSP1_UniversalReceiverDelegate.sol\":\"ILSP1Delegate\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ILSP1_UniversalReceiverDelegate.sol\":{\"keccak256\":\"0x7788a2e190bd0b37e267cde26e43dd4622463322a5db17df8d1dc1c5ce480b39\",\"license\":\"CC0-1.0\",\"urls\":[\"bzz-raw://bf106cb4615944aa323bbf86d192587deecb4a45a16efb3785edfa7439d576a6\",\"dweb:/ipfs/QmRNrFGP3oC1XnE987Uu6stjerAmqhDfN9xZEbuSMXc2at\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: CC0-1.0\npragma solidity ^0.8.0;\n\n/**\n * @dev Contract module that allows for an external universal receiver smart contract, \n *      that is the delegate of the initial universal receiver\n *\n * ERC 165 interface id: 0xc2d7bcc1\n */\ninterface ILSP1Delegate  /* is ERC165 */ {\n\n    function universalReceiverDelegate(address sender, bytes32 typeId, bytes memory data) external returns (bytes memory);\n\n}\n",
+  "sourcePath": "/Users/jeancavallera/Documents/Repositories/ERC725/implementations/contracts/interfaces/ILSP1_UniversalReceiverDelegate.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ILSP1_UniversalReceiverDelegate.sol",
+    "exportedSymbols": {
+      "ILSP1Delegate": [
+        3638
+      ]
+    },
+    "id": 3639,
+    "license": "CC0-1.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3625,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:23:39"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 3626,
+          "nodeType": "StructuredDocumentation",
+          "src": "61:197:39",
+          "text": " @dev Contract module that allows for an external universal receiver smart contract, \n      that is the delegate of the initial universal receiver\n ERC 165 interface id: 0xc2d7bcc1"
+        },
+        "fullyImplemented": false,
+        "id": 3638,
+        "linearizedBaseContracts": [
+          3638
+        ],
+        "name": "ILSP1Delegate",
+        "nameLocation": "269:13:39",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "c2d7bcc1",
+            "id": 3637,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "universalReceiverDelegate",
+            "nameLocation": "316:25:39",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3628,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "350:6:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "342:14:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3627,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "342:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3630,
+                  "mutability": "mutable",
+                  "name": "typeId",
+                  "nameLocation": "366:6:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "358:14:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3629,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3632,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "387:4:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "374:17:39",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3631,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:5:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "341:51:39"
+            },
+            "returnParameters": {
+              "id": 3636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3635,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "411:12:39",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3634,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "411:5:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "410:14:39"
+            },
+            "scope": 3638,
+            "src": "307:118:39",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3639,
+        "src": "259:169:39"
+      }
+    ],
+    "src": "36:393:39"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ILSP1_UniversalReceiverDelegate.sol",
+    "exportedSymbols": {
+      "ILSP1Delegate": [
+        3638
+      ]
+    },
+    "id": 3639,
+    "license": "CC0-1.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 3625,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:23:39"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 3626,
+          "nodeType": "StructuredDocumentation",
+          "src": "61:197:39",
+          "text": " @dev Contract module that allows for an external universal receiver smart contract, \n      that is the delegate of the initial universal receiver\n ERC 165 interface id: 0xc2d7bcc1"
+        },
+        "fullyImplemented": false,
+        "id": 3638,
+        "linearizedBaseContracts": [
+          3638
+        ],
+        "name": "ILSP1Delegate",
+        "nameLocation": "269:13:39",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "c2d7bcc1",
+            "id": 3637,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "universalReceiverDelegate",
+            "nameLocation": "316:25:39",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 3633,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3628,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "350:6:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "342:14:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 3627,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "342:7:39",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3630,
+                  "mutability": "mutable",
+                  "name": "typeId",
+                  "nameLocation": "366:6:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "358:14:39",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 3629,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:7:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 3632,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "387:4:39",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "374:17:39",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3631,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:5:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "341:51:39"
+            },
+            "returnParameters": {
+              "id": 3636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 3635,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 3637,
+                  "src": "411:12:39",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 3634,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "411:5:39",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "410:14:39"
+            },
+            "scope": 3638,
+            "src": "307:118:39",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 3639,
+        "src": "259:169:39"
+      }
+    ],
+    "src": "36:393:39"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-10-05T22:08:16.510Z",
+  "devdoc": {
+    "details": "Contract module that allows for an external universal receiver smart contract,       that is the delegate of the initial universal receiver ERC 165 interface id: 0xc2d7bcc1",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
