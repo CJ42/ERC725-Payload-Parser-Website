@@ -4,6 +4,10 @@ import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
+// layout
+import Header from "./Header"
+import Body from "./Body"
+
 class App extends Component {
   state = { storageValue: 0, web3: null, accounts: null, contract: null };
 
@@ -11,7 +15,6 @@ class App extends Component {
     try {
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
-
       // Use web3 to get the user's accounts.
       const accounts = await web3.eth.getAccounts();
 
@@ -25,7 +28,7 @@ class App extends Component {
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
+      this.setState({ web3, accounts, contract: instance });
     } catch (error) {
       // Catch any errors for any of the above operations.
       alert(
@@ -35,29 +38,19 @@ class App extends Component {
     }
   };
 
-  runExample = async () => {
-    const { accounts, contract } = this.state;
-
-    // Stores a given value, 5 by default.
-    // await contract.methods.set(5).send({ from: accounts[0] });
-
-    // Get the value from the contract to prove it worked.
-    // const response = await contract.methods.get().call();
-
-    // Update state with the result.
-    // this.setState({ storageValue: response });
-  };
-
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
     return (
       <div className="App">
-        <h1>ERC725 Payload Parser</h1>
+        <Header />
+        <Body web3={this.state.web3} />
       </div>
     );
   }
 }
 
 export default App;
+
+// 0x14a6e29300000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000500b76b597620a89621ab37aedc4220d553ad6145a885461350e5990372b906f5ec0b5f320e0ea347fc9933bae33a8b95e37f29093aba1e785ab189f5b3085770218f9c7bdd3da73629e68588ba3407ca7c24019f8ee2b67bd036fcc54c325c48d707c57383b58ff36545cbd4481e6525bc9774d04b9c7e2465c50ff9bd8041522bf0eae2fa20fdead08fbb3e023267a71f51981602946c3382caecfa75abce68000000000000000000000000000000000000000000000000000000000000000500000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e00000000000000000000000000000000000000000000000000000000000000120000000000000000000000000000000000000000000000000000000000000016000000000000000000000000000000000000000000000000000000000000001a0000000000000000000000000000000000000000000000000000000000000000a6161616161616161616100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a6262626262626262626200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a6363636363636363636300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a6464646464646464646400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a6565656565656565656500000000000000000000000000000000000000000000
