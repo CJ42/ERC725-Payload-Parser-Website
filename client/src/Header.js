@@ -32,7 +32,7 @@ export default function Header() {
           <Typography variant="h5" className={classes.title}>
             ERC725 Payload Parser
           </Typography>
-          <Button color="inherit">Github</Button>
+          <Button color="inherit" href="https://github.com/CJ42/ERC725-Payload-Parser-Website">Github</Button>
         </Toolbar>
       </AppBar>
     </div>
