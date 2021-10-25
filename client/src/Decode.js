@@ -92,8 +92,9 @@ export default function Decode(props) {
 
               setSelector(selector)
               setPayload(payload)
+
               
-              if (!Object(SELECTORS).values.includes(selector)) {
+              if (!Object.values(SELECTORS).includes(selector)) {
                 setABIError({ error: true, message: "Unrecognised ERC725 selector" })
                 return;
               } else {
