@@ -1,23 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Zoom from '@material-ui/core/Zoom';
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import UpIcon from '@material-ui/icons/KeyboardArrowUp';
-import { green } from '@material-ui/core/colors';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import PropTypes from "prop-types";
+import clsx from "clsx";
+import SwipeableViews from "react-swipeable-views";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Zoom from "@material-ui/core/Zoom";
+import Fab from "@material-ui/core/Fab";
+import AddIcon from "@material-ui/icons/Add";
+import EditIcon from "@material-ui/icons/Edit";
+import UpIcon from "@material-ui/icons/KeyboardArrowUp";
+import { green } from "@material-ui/core/colors";
+import Box from "@material-ui/core/Box";
 
 // layout
-import Decode from "./Decode"
-import Encode from "./Encode"
+import Decode from "./Decode";
+import Encode from "./Encode";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -45,26 +45,26 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `action-tab-${index}`,
-    'aria-controls': `action-tabpanel-${index}`,
+    "aria-controls": `action-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    width: '100%',
-    position: 'relative',
+    width: "100%",
+    position: "relative",
     minHeight: 200,
   },
   fab: {
-    position: 'absolute',
+    position: "absolute",
     bottom: theme.spacing(2),
     right: theme.spacing(2),
   },
   fabGreen: {
     color: theme.palette.common.white,
     backgroundColor: green[500],
-    '&:hover': {
+    "&:hover": {
       backgroundColor: green[600],
     },
   },
@@ -90,22 +90,22 @@ export default function FloatingActionButtonZoom(props) {
 
   const fabs = [
     {
-      color: 'primary',
+      color: "primary",
       className: classes.fab,
       icon: <AddIcon />,
-      label: 'Add',
+      label: "Add",
     },
     {
-      color: 'secondary',
+      color: "secondary",
       className: classes.fab,
       icon: <EditIcon />,
-      label: 'Edit',
+      label: "Edit",
     },
     {
-      color: 'inherit',
+      color: "inherit",
       className: clsx(classes.fab, classes.fabGreen),
       icon: <UpIcon />,
-      label: 'Expand',
+      label: "Expand",
     },
   ];
 
@@ -125,7 +125,7 @@ export default function FloatingActionButtonZoom(props) {
         </Tabs>
       </AppBar>
       <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
@@ -136,21 +136,6 @@ export default function FloatingActionButtonZoom(props) {
           <Decode web3={props.web3} />
         </TabPanel>
       </SwipeableViews>
-      {fabs.map((fab, index) => (
-        <Zoom
-          key={fab.color}
-          in={value === index}
-          timeout={transitionDuration}
-          style={{
-            transitionDelay: `${value === index ? transitionDuration.exit : 0}ms`,
-          }}
-          unmountOnExit
-        >
-          <Fab aria-label={fab.label} className={fab.className} color={fab.color}>
-            {fab.icon}
-          </Fab>
-        </Zoom>
-      ))}
     </div>
   );
 }
