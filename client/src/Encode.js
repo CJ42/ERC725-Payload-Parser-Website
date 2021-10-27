@@ -170,75 +170,82 @@ function ExecuteEncoder({ web3, account }) {
   const [encodedPayload, setEncodedPayload] = useState("");
 
   return (
-    <Grid container>
-      <Grid item md={12}>
-        <InputLabel id="demo-simple-select-label">Operation</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={operation}
-          onChange={(event) => setOperation(event.target.value)}
-        >
-          <MenuItem value={"0"}>CALL</MenuItem>
-          <MenuItem value={"1"}>CREATE</MenuItem>
-          <MenuItem value={"2"}>CREATE2</MenuItem>
-          <MenuItem value={"3"}>STATICCALL</MenuItem>
-          <MenuItem value={"4"}>DELEGATECALL</MenuItem>
-        </Select>
+    <>
+      <Grid container justifyContent="center">
+        <Grid item md={12}>
+          <InputLabel id="demo-simple-select-label">Operation</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            value={operation}
+            onChange={(event) => setOperation(event.target.value)}
+          >
+            <MenuItem value={"0"}>CALL</MenuItem>
+            <MenuItem value={"1"}>CREATE</MenuItem>
+            <MenuItem value={"2"}>CREATE2</MenuItem>
+            <MenuItem value={"3"}>STATICCALL</MenuItem>
+            <MenuItem value={"4"}>DELEGATECALL</MenuItem>
+          </Select>
+        </Grid>
+        <Grid item md={12}>
+          <TextField
+            label="Recipient"
+            defaultValue="0xcafe..."
+            value={recipient}
+            fullWidth
+            onChange={(event) => {
+              let input = event.target.value;
+              setRecipient(input);
+            }}
+          />
+        </Grid>
+        <Grid item md={12}>
+          <TextField
+            label="Amount"
+            defaultValue="x LYX"
+            value={amount}
+            fullWidth
+            onChange={(event) => {
+              let input = event.target.value;
+              setAmount(input);
+            }}
+          />
+        </Grid>
+        <Grid item md={12}>
+          <TextField
+            label="Data"
+            defaultValue="0x..."
+            value={data}
+            fullWidth
+            onChange={(event) => {
+              let input = event.target.value;
+              setData(input);
+            }}
+          />
+        </Grid>
       </Grid>
-      <Grid item md={12}>
-        <TextField
-          label="Recipient"
-          defaultValue="0xcafe..."
-          value={recipient}
-          fullWidth
-          onChange={(event) => {
-            let input = event.target.value;
-            setRecipient(input);
-          }}
-        />
-      </Grid>
-      <Grid item md={12}>
-        <TextField
-          label="Amount"
-          defaultValue="x LYX"
-          value={amount}
-          fullWidth
-          onChange={(event) => {
-            let input = event.target.value;
-            setAmount(input);
-          }}
-        />
-      </Grid>
-      <Grid item md={12}>
-        <TextField
-          label="Data"
-          defaultValue="0x..."
-          value={data}
-          fullWidth
-          onChange={(event) => {
-            let input = event.target.value;
-            setData(input);
-          }}
-        />
-      </Grid>
-      <Button
-        variant="contained"
-        color="primary"
-        size="large"
-        startIcon={<SaveIcon />}
-        onClick={() => {
-          setEncodedPayload(
-            account.methods
-              .execute(operation, recipient, amount, data)
-              .encodeABI()
-          );
-        }}
+      <div
+        style={{ height: 300, width: "100%", marginBottom: 10, marginTop: 10 }}
       >
-        Encode ABI
-      </Button>
-      <EncodedPayload payload={encodedPayload} />
-    </Grid>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          startIcon={<SaveIcon />}
+          onClick={() => {
+            let weiAmount = web3.utils.toWei(amount);
+            setEncodedPayload(
+              account.methods
+                .execute(operation, recipient, weiAmount, data)
+                .encodeABI()
+            );
+          }}
+        >
+          Encode ABI
+        </Button>
+        <EncodedPayload payload={encodedPayload} />
+      </div>
+    </>
   );
 }
 
