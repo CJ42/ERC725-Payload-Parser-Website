@@ -20,7 +20,7 @@ const ACTION_SETDATA = "setData";
 const ACTION_EXECUTE = "execute";
 const ACTION_TRANSFEROWNERSHIP = "transferOwnership";
 
-const ERC725Account = require("./contracts/ERC725Account.json");
+const ERC725Account = require("./abis/ERC725Account.json");
 
 export default function Encode(props) {
   const erc725Account = new props.web3.eth.Contract(ERC725Account.abi);
