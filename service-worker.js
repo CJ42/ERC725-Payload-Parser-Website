@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ERC725-Payload-Parser-Website/precache-manifest.36880c1a0b01aaa0fc93eb3f70118fd5.js"
+  "/ERC725-Payload-Parser-Website/precache-manifest.87c53adfea7624cadb8859bbd82545b2.js"
 );
 
 self.addEventListener('message', (event) => {

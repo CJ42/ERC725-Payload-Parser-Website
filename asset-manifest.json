@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/ERC725-Payload-Parser-Website/static/css/main.b100e6da.chunk.css",
-    "main.js": "/ERC725-Payload-Parser-Website/static/js/main.555485b9.chunk.js",
-    "main.js.map": "/ERC725-Payload-Parser-Website/static/js/main.555485b9.chunk.js.map",
+    "main.js": "/ERC725-Payload-Parser-Website/static/js/main.129817fe.chunk.js",
+    "main.js.map": "/ERC725-Payload-Parser-Website/static/js/main.129817fe.chunk.js.map",
     "runtime-main.js": "/ERC725-Payload-Parser-Website/static/js/runtime-main.7bbd5523.js",
     "runtime-main.js.map": "/ERC725-Payload-Parser-Website/static/js/runtime-main.7bbd5523.js.map",
-    "static/js/2.f0e5889c.chunk.js": "/ERC725-Payload-Parser-Website/static/js/2.f0e5889c.chunk.js",
-    "static/js/2.f0e5889c.chunk.js.map": "/ERC725-Payload-Parser-Website/static/js/2.f0e5889c.chunk.js.map",
+    "static/js/2.ffb263cd.chunk.js": "/ERC725-Payload-Parser-Website/static/js/2.ffb263cd.chunk.js",
+    "static/js/2.ffb263cd.chunk.js.map": "/ERC725-Payload-Parser-Website/static/js/2.ffb263cd.chunk.js.map",
     "index.html": "/ERC725-Payload-Parser-Website/index.html",
-    "precache-manifest.36880c1a0b01aaa0fc93eb3f70118fd5.js": "/ERC725-Payload-Parser-Website/precache-manifest.36880c1a0b01aaa0fc93eb3f70118fd5.js",
+    "precache-manifest.87c53adfea7624cadb8859bbd82545b2.js": "/ERC725-Payload-Parser-Website/precache-manifest.87c53adfea7624cadb8859bbd82545b2.js",
     "service-worker.js": "/ERC725-Payload-Parser-Website/service-worker.js",
     "static/css/main.b100e6da.chunk.css.map": "/ERC725-Payload-Parser-Website/static/css/main.b100e6da.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.7bbd5523.js",
-    "static/js/2.f0e5889c.chunk.js",
+    "static/js/2.ffb263cd.chunk.js",
     "static/css/main.b100e6da.chunk.css",
-    "static/js/main.555485b9.chunk.js"
+    "static/js/main.129817fe.chunk.js"
   ]
 }
