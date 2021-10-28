@@ -5,7 +5,7 @@ import getWeb3 from "./getWeb3";
 import "./App.css";
 
 // layout
-import Header from "./Header"
+import Header from "./components/Header/Header"
 import Body from "./Body"
 
 class App extends Component {
